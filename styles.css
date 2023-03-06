@@ -1,144 +1,164 @@
 body {
-  box-sizing: border-box;
-  margin: 0 auto;
-  padding: 0;
-  background-color: hsl(0, 0%, 100%);
-  font-family: "Space Grotesk", sans-serif;
-  font-size: 18px;
-  color: hsl(186, 14%, 43%);
-  /* min-height: 100vh; */
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0;
+    background-color: hsl(0, 0%, 100%);
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 18px;
+    min-height: 100vh;
 }
 
 @layer base {
-  input[type="number"]::-webkit-inner-spin-button,
-  input[type="number"]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
 }
 
 h2 {
-  font-size: 12px;
-  letter-spacing: 1.7px;
-  color: hwb(278 4% 82%);
-  opacity: 0.8;
-}
-
-.logo {
-  position: relative;
-}
-
-.bg-card-front {
-  position: absolute;
-  width: 280px;
-  left: 18px;
-  top: 120px;
+    font-size: 12px;
+    letter-spacing: 1.7px;
+    color: hwb(278 4% 82%);
+    opacity: 0.8;
 }
 
 div.main-container {
-  background-color: bisque;
-  display: flex;
-  flex-direction: column;
-  height: 844px;
-  width: 375px;
+    display: flex;
+    flex-direction: column;
+    height: 844px;
+    width: 375px;
+}
+
+div.top-box {
+    background-color: rgb(33, 9, 47);
+    width: 375px;
+}
+
+.logo {
+    position: relative;
+}
+
+.bg-card-back {
+    position: absolute;
+    width: 290px;
+    left: 70px;
+    top: 40px;
+}
+
+.bg-card-front {
+    position: absolute;
+    width: 290px;
+    left: 18px;
+    top: 130px;
 }
 
 /* cardholder name, number */
 div.bottom-box {
-  display: flex;
-  flex-direction: column;
-  padding: 25px;
-  row-gap: 15px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+    padding: 25px;
+    row-gap: 15px;
 }
 
 section.card-name-section,
 section.card-number-section,
 section.card-exp-section,
 section.cvc-section {
-  height: 80px;
-  width: 100%;
+    height: 80px;
+    width: 100%;
 }
 
 section.card-exp-section {
-  width: 50%;
+    width: 50%;
 }
 
 section.cvc-section {
-  width: 50%;
+    width: 50%;
 }
 
 /* exp date cvs */
 div.middle-box {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  padding: 0 25px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 0 25px;
+    margin-top: -10px;
 }
 
 input[type="text"],
 input[type="number"] {
-  color: hsl(183, 100%, 15%);
-  width: 100%;
-  height: 55%;
-  text-align: right;
-  font-family: "Space Grotesk", monospace;
-  font-size: 24px;
-  border-style: solid;
-  border-width: thin;
-  border-color: hsl(270, 3%, 87%);
-  border-radius: 10px;
-  cursor: pointer;
+    color: hsl(278, 68%, 11%);
+    width: 100%;
+    height: 55%;
+    text-align: left;
+    font-family: "Space Grotesk", monospace;
+    font-size: 18px;
+    font-weight: 500;
+    border-style: solid;
+    border-width: thin;
+    border-color: hsl(270, 3%, 87%);
+    border-radius: 10px;
+    cursor: pointer;
+    padding-left: 20px;
 }
 
 /* the actual box inputs */
 input[type="number"].exp-mm,
 input[type="number"].exp-yy {
-  width: 40%;
+    width: 40%;
 }
 
 input[type="number"].cvc {
-  width: 96%;
+    width: 96%;
 }
 
 input.card-name,
 input.card-number {
-  width: 98%;
+    width: 98%;
+}
+
+input:focus {
+    outline-color: hsl(278, 68%, 11%);
+    outline-style: solid;
+    outline-width: thin;
 }
 
 div.btn {
-  margin-top: 30px;
-  padding: 0 25px;
+    margin-top: 30px;
+    padding: 0 25px;
 }
 
 .confirm-btn {
-  background-color: hsl(278, 68%, 11%);
-  color: hsl(0, 0%, 100%);
-  border: solid;
-  border-radius: 10px;
-  border: none;
-  font-family: "Space Grotesk", monospace;
-  width: 100%;
-  height: 55px;
-  font-size: 1.1rem;
-  justify-self: center;
-  align-self: center;
-  pointer-events: none;
+    background-color: hsl(278, 68%, 11%);
+    color: hsl(0, 0%, 100%);
+    border: solid;
+    border-radius: 10px;
+    border: none;
+    font-family: "Space Grotesk", monospace;
+    width: 100%;
+    height: 55px;
+    font-size: 1.1rem;
+    justify-self: center;
+    align-self: center;
+    pointer-events: none;
 }
 
 .attribution {
-  font-size: 11px;
-  text-align: center;
+    font-size: 11px;
+    text-align: center;
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+    color: hsl(228, 45%, 44%);
 }
 
 ::placeholder {
-  color: hsl(270, 3%, 87%);
-  text-align: left;
-  font-size: 19px;
-  font-weight: 500;
-  padding-left: 15px;
+    color: hsl(270, 3%, 87%);
+    text-align: left;
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 15px;
 }
 
 /* ## Layout
