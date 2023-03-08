@@ -1,51 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Billing Info</title>
-  </head>
-  <body>
-    <h1>TODO</h1>
 
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
     <main>
         <div class="container">
+            <div class="top-box">
+                <img class="logo" src="images/bg-main-mobile.png" alt="website logo" />
+                <img class="bg-card-back" src="images/bg-card-back.png" alt="back view of card" />
+                <img class="bg-card-front" src="images/bg-card-front.png" alt="front view of card" />
+            </div>
+
             <div class="main-container">
-                <div class="top-box"></div>
+
                 <div class="bottom-box">
-                    <section class="card-name">
-                        <label for="username-label"><h2>CARDHOLDER NAME</h2></label>
-                        <input type="text" id="username-label" placeholder="e.g Jane Appleseed" required />
+                    <section class="card-name-section">
+                        <label for="username-label">
+                            <h2>CARDHOLDER NAME</h2>
+                        </label>
+                        <input type="text" class="card-name" id="username-label" placeholder="e.g. Jane Appleseed"
+                            required />
                     </section>
 
-                    <section class="card-number">                
-                        <label for="cc-label"><h2>CARD NUMBER</h2></label>
-                        <input type="number" id="cc-label" placeholder="e.g 1234 5678 9123 0000" required />
+                    <section class="card-number-section">
+                        <label for="cc-label">
+                            <h2>CARD NUMBER</h2>
+                        </label>
+                        <input type="number" class="card-number" id="cc-label" placeholder="e.g. 1234 5678 9123 0000"
+                            required />
                     </section>
-
-                    <section class="card-exp">
-                        <label for="exp-label"><h2>EXP. DATE(MM/YY)</h2></label>
-                        <input type="number" id="exp-label" required />
-                        <input type="number" id="exp-label" required />
-                    </section>
-
-                    <section class="card-cvc">
-                        <label for="cvc-label"><h2>CVC</h2></label>
-                        <input type="number" id="cvc-label" required />
-                    </section>
-
-                    <div class="confirm-btn">
-                        <button type="button">Confirm</button>
-                    </div>
                 </div>
+
+                <div class="middle-box">
+                    <section class="card-exp-section">
+                        <h2>EXP. DATE (MM/YY)</h2>
+                        <label for="month-label"></label>
+                        <input type="number" class="exp-mm" id="month-label" placeholder="MM" required />
+                        <label for="year-label"></label>
+                        <input type="number" class="exp-yy" id="year-label" placeholder="YY" required />
+                    </section>
+
+                    <section class="cvc-section">
+                        <label for="cvc-label">
+                            <h2>CVC</h2>
+                        </label>
+                        <input type="number" class="cvc" id="cvc-label" placeholder="e.g. 123" required />
+                    </section>
+                </div>
+
+                <div class="btn">
+                    <button class="confirm-btn" type="button">Confirm</button>
+                </div>
+
             </div>
         </div>
-    <footer>
-        <div class="attribution">
-            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-            Coded by <a href="#">Your Name Here</a>.
-        </div>
-    </footer>
-  </body>
+        <footer>
+            <div class="attribution">
+                Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+                Coded by <a href="#">Your Name Here</a>.
+            </div>
+        </footer>
+</body>
+
 </html>
