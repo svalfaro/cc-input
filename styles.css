@@ -1,8 +1,7 @@
 body {
     box-sizing: border-box;
     margin: 0 auto;
-    /* background-color: hsl(0, 0%, 100%); */
-    background-color: yellowgreen;
+    background-color: hsl(0, 0%, 100%);
     font-family: "Space Grotesk", sans-serif;
     font-size: 18px;
     min-height: 100vh;
@@ -26,8 +25,7 @@ h2 {
 .container {
     display: flex;
     flex-direction: column;
-    background-color: bisque;
-    /* justify-content: center; */
+    background-color: hsl(0, 0%, 100%);
     max-width: 375px;
 }
 
@@ -35,11 +33,10 @@ div.main-container {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    height: 653px;
     width: 375px;
 }
 
-div.top-box {
+div.img-container {
     background-color: rgb(33, 9, 47);
     width: 375px;
 }
@@ -61,6 +58,52 @@ div.top-box {
     width: 290px;
     left: 18px;
     top: 130px;
+}
+
+span.name-on-card {
+    position: absolute;
+    color: white;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 10px;
+    opacity: 0.8;
+    letter-spacing: 1.4px;
+    left: 40px;
+    top: 255px;
+}
+
+span.exp-on-cardMM,
+span.exp-slash,
+span.exp-on-cardYY,
+span.number-on-car,
+span.cvc-on-card {
+    position: absolute;
+    color: white;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 10px;
+    opacity: 0.8;
+    letter-spacing: 1.4px;
+    left: 250px;
+    top: 255px;
+}
+
+span.exp-slash {
+    left: 265px;
+}
+
+span.exp-on-cardYY {
+    left: 270px;
+}
+
+span.number-on-card {
+    font-size: 19.5px;
+    left: 40px;
+    top: 213px;
+}
+
+span.cvc-on-card {
+    /* font-size: 19.5px; */
+    top: 112px;
+    left: 301px;
 }
 
 /* cardholder name, number */
@@ -100,7 +143,6 @@ div.middle-box {
 input[type="text"],
 input[type="number"] {
     color: hsl(278, 68%, 11%);
-    width: 100%;
     height: 55%;
     text-align: left;
     font-family: "Space Grotesk", monospace;
@@ -121,12 +163,12 @@ input[type="number"].exp-yy {
 }
 
 input[type="number"].cvc {
-    width: 96%;
+    width: 86%;
 }
 
 input.card-name,
 input.card-number {
-    width: 98%;
+    width: 93%;
 }
 
 input:focus {
@@ -136,8 +178,8 @@ input:focus {
 }
 
 div.btn {
-    width: 92%;
-    margin-top: 30px;
+    width: 87%;
+    margin-top: 40px;
     padding: 0 25px;
 }
 
@@ -157,6 +199,7 @@ div.btn {
 .attribution {
     font-size: 11px;
     text-align: center;
+    margin-top: 10px;
 }
 .attribution a {
     color: hsl(228, 45%, 44%);
