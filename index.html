@@ -20,6 +20,7 @@
                 <img class="logo" src="images/bg-main-mobile.png" alt="website logo" />
                 <img class="bg-card-back" src="images/bg-card-back.png" alt="back view of card" />
                 <img class="bg-card-front" src="images/bg-card-front.png" alt="front view of card" />
+                <img class="cc-logo" src="images/card-logo.svg" alt="credit card logo" />
                 <span class="cvc-on-card">000</span>
                 <span class="number-on-card">0000 0000 0000 0000</span>
                 <span class="name-on-card">JANE APPLESEED</span>
@@ -43,13 +44,14 @@
                         <label for="cc-label">
                             <h2>CARD NUMBER</h2>
                         </label>
-                        <input type="number" class="card-number" id="cc-label" placeholder="e.g. 1234 5678 9123 0000"
-                            required />
+                        <input type="number" class="card-number" id="cc-label" max="10"
+                            placeholder="e.g. 1234 5678 9123 0000" required />
                     </section>
                 </div>
 
                 <div class="middle-box">
-                    <section class="card-exp-section">
+                    <!-- card-exp-section -->
+                    <section class="card-exp-section card-check">
                         <h2>EXP. DATE (MM/YY)</h2>
                         <label for="month-label"></label>
                         <input type="number" class="exp-mm" id="month-label" placeholder="MM" required />
@@ -57,11 +59,13 @@
                         <input type="number" class="exp-yy" id="year-label" placeholder="YY" required />
                     </section>
 
-                    <section class="cvc-section">
+                    <!-- cvc-section -->
+                    <section class="cvc-section thank-you-msg">
                         <label for="cvc-label">
                             <h2>CVC</h2>
                         </label>
-                        <input type="number" class="cvc" id="cvc-label" placeholder="e.g. 123" required />
+                        <input type="number" class="cvc" id="cvc-label" min="100" max="999" placeholder=" e.g. 123"
+                            required />
                     </section>
                 </div>
 
