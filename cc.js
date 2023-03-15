@@ -9,8 +9,25 @@ const username = document.querySelector(".card-name");
 const cardNumber = document.querySelector(".card-number");
 const cvcNumber = document.querySelector(".cvc");
 
+// TODO
+// create function to check and prevent further input (for both letters and numbers) ie: e.preventDefault()
+
+function insertSpaces(str) {
+    let result = "";
+    for (let i = 0; i < str.length; i++) {
+        result += str[i];
+        if ((i + 1) % 4 === 0 && i !== str.length - 1) {
+            result += " ";
+        }
+    }
+    return result;
+}
+
 username.addEventListener("input", () => {
     nameOnCardFront.innerText = username.value.toUpperCase();
+    if (username.value === "") {
+        nameOnCardFront.innerText = "JANE APPLESEED";
+    }
 });
 
 expirationMonths.addEventListener("input", () => {
@@ -21,10 +38,10 @@ expirationYears.addEventListener("input", () => {
     expYY.innerText = expirationYears.value;
 });
 
-cardNumber.addEventListener("input", () => {
-    numberOnCardFront.innerText = cardNumber.value;
+cardNumber.addEventListener("input", (e) => {
+    numberOnCardFront.innerText = insertSpaces(e.target.value);
 });
 
-cvcNumber.addEventListener("input", () => {
+cvcNumber.addEventListener("input", (e) => {
     cvcOnCardBack.innerText = cvcNumber.value;
 });
