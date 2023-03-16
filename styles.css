@@ -29,7 +29,8 @@ h2 {
     max-width: 375px;
 }
 
-div.main-container {
+div.main-container,
+div.thank-you-container {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -60,6 +61,13 @@ div.img-container {
     top: 130px;
 }
 
+.cc-logo {
+    position: absolute;
+    width: 50px;
+    left: 40px;
+    top: 150px;
+}
+
 span.name-on-card {
     position: absolute;
     color: white;
@@ -74,7 +82,7 @@ span.name-on-card {
 span.exp-on-cardMM,
 span.exp-slash,
 span.exp-on-cardYY,
-span.number-on-car,
+span.number-on-card,
 span.cvc-on-card {
     position: absolute;
     color: white;
@@ -95,9 +103,10 @@ span.exp-on-cardYY {
 }
 
 span.number-on-card {
-    font-size: 19.5px;
+    font-size: 19px;
     left: 40px;
     top: 213px;
+    opacity: 1;
 }
 
 span.cvc-on-card {
@@ -113,6 +122,34 @@ div.bottom-box {
     margin-top: 60px;
     padding: 25px;
     row-gap: 15px;
+}
+
+div.check-logo {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+    padding: 25px;
+    row-gap: 15px;
+    align-items: center;
+}
+
+.complete-check-logo {
+    width: 80px;
+}
+
+.ty-section {
+    text-align: center;
+}
+
+.ty-section h2 {
+    font-size: 27px;
+    color: hsl(278, 68%, 11%);
+}
+
+.ty-section p {
+    color: hsl(279, 6%, 55%);
+    font-weight: 500;
+    opacity: 0.9;
 }
 
 section.card-name-section,
@@ -183,6 +220,10 @@ div.btn {
     padding: 0 25px;
 }
 
+div.hide-me {
+    display: none;
+}
+
 .confirm-btn {
     background-color: hsl(278, 68%, 11%);
     color: hsl(0, 0%, 100%);
@@ -193,7 +234,6 @@ div.btn {
     width: 100%;
     height: 55px;
     font-size: 1.1rem;
-    pointer-events: none;
 }
 
 .attribution {
