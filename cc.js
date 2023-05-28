@@ -1,47 +1,63 @@
-const nameOnCardFront = document.querySelector(".name-on-card");
-const numberOnCardFront = document.querySelector(".number-on-card");
-const cvcOnCardBack = document.querySelector(".cvc-on-card");
-const expMM = document.querySelector(".exp-on-cardMM"); //for show
-const expYY = document.querySelector(".exp-on-cardYY"); //for show
-const expirationMonths = document.querySelector(".exp-mm");
-const expirationYears = document.querySelector(".exp-yy");
-const username = document.querySelector(".card-name");
-const cardNumber = document.querySelector(".card-number");
-const cvcNumber = document.querySelector(".cvc");
-
-// TODO
-// create function to check and prevent further input (for both letters and numbers) ie: e.preventDefault()
+const nameOnCardFront = document.querySelector('.name-on-card');
+const numberOnCardFront = document.querySelector('.number-on-card');
+const cvcOnCardBack = document.querySelector('.cvc-on-card');
+const expMM = document.querySelector('.exp-on-cardMM'); //for show
+const expYY = document.querySelector('.exp-on-cardYY'); //for show
+const expirationMonths = document.querySelector('.exp-mm');
+const expirationYears = document.querySelector('.exp-yy');
+const username = document.querySelector('.card-name');
+const cardNumber = document.querySelector('.card-number');
+const cvcNumber = document.querySelector('.cvc');
+const confirmed = document.querySelector('.confirm-btn');
+const lol = document.querySelector('.main-container');
+const lol2 = document.querySelector('.thank-you-container');
 
 function insertSpaces(str) {
-    let result = "";
+    let result = '';
     for (let i = 0; i < str.length; i++) {
         result += str[i];
         if ((i + 1) % 4 === 0 && i !== str.length - 1) {
-            result += " ";
+            result += ' ';
         }
     }
     return result;
 }
 
-username.addEventListener("input", () => {
+username.addEventListener('input', () => {
     nameOnCardFront.innerText = username.value.toUpperCase();
-    if (username.value === "") {
-        nameOnCardFront.innerText = "JANE APPLESEED";
+    if (username.value === '') {
+        nameOnCardFront.innerText = 'JANE APPLESEED';
     }
 });
 
-expirationMonths.addEventListener("input", () => {
+expirationMonths.addEventListener('input', () => {
     expMM.innerText = expirationMonths.value;
 });
 
-expirationYears.addEventListener("input", () => {
+expirationYears.addEventListener('input', () => {
     expYY.innerText = expirationYears.value;
 });
 
-cardNumber.addEventListener("input", (e) => {
+cardNumber.addEventListener('input', (e) => {
+    const inputValue = e.target.value.replace(/\D/g, '');
+    cardNumArr = Array.from(inputValue);
+    console.log(inputValue);
+
     numberOnCardFront.innerText = insertSpaces(e.target.value);
 });
 
-cvcNumber.addEventListener("input", (e) => {
+cvcNumber.addEventListener('input', (e) => {
+    const maxLength = 3; // Maximum number of numerical characters allowed
+
+    if (cvcNumber.value.length > maxLength) {
+        cvcNumber.value = cvcNumber.value.slice(0, maxLength);
+    }
     cvcOnCardBack.innerText = cvcNumber.value;
+});
+
+confirmed.addEventListener('click', () => {
+    // expirationMonths.style.display = "none";
+    // expirationYears.style.display = "none";
+    lol.remove();
+    lol2.classList.remove('hide-me');
 });
