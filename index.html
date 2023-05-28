@@ -17,7 +17,7 @@
     <main>
         <div class="container">
             <div class="img-container">
-                <img class="logo" src="images/bg-main-mobile.png" alt="website logo" />
+                <img class="main-logo" src="images/bg-main-mobile.png" alt="website logo" />
                 <img class="bg-card-back" src="images/bg-card-back.png" alt="back view of card" />
                 <img class="bg-card-front" src="images/bg-card-front.png" alt="front view of card" />
                 <img class="cc-logo" src="images/card-logo.svg" alt="credit card logo" />
@@ -36,15 +36,15 @@
                         <label for="username-label">
                             <h2>CARDHOLDER NAME</h2>
                         </label>
-                        <input type="text" class="card-name" id="username-label" placeholder="e.g. Jane Appleseed"
-                            required />
+                        <input type="text" class="card-name" id="username-label" maxlength="26"
+                            placeholder="e.g. Jane Appleseed" required />
                     </section>
 
                     <section class="card-number-section">
                         <label for="cc-label">
                             <h2>CARD NUMBER</h2>
                         </label>
-                        <input type="number" class="card-number" id="cc-label" max="10"
+                        <input type="number" class="card-number" id="cc-label" min="0" max="2"
                             placeholder="e.g. 1234 5678 9123 0000" required />
                     </section>
                 </div>
@@ -62,10 +62,11 @@
                         <label for="cvc-label">
                             <h2>CVC</h2>
                         </label>
-                        <input type="number" class="cvc" id="cvc-label" min="100" max="999" placeholder=" e.g. 123"
+                        <input type="number" class="cvc" id="cvc-label" pattern="^\d{1,2}$" placeholder=" e.g. 123"
                             required />
                     </section>
                 </div>
+
 
                 <div class="btn">
                     <button class="confirm-btn" type="button">Confirm</button>
@@ -96,7 +97,7 @@
     <footer>
         <div class="attribution">
             Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-            Coded by <a href="#">Your Name Here</a>.
+            Coded by <a href="mailto:sheilavalfaro@gmail.com">Sheila Alfaro</a>.
         </div>
     </footer>
 
