@@ -165,14 +165,16 @@
         height: 80px;
         width: 100%;
     }
-    /* 
+
     section.card-exp-section {
-        width: 50%;
+        width: 45%;
+        /* background-color: red; */
     }
 
     section.cvc-section {
-        width: 50%;
-    } */
+        width: 45%;
+        /* background-color: blue; */
+    }
 
     /* exp date cvs */
     div.middle-box {
@@ -181,7 +183,7 @@
         flex-wrap: nowrap;
         padding: 0 25px;
         margin-top: 10px;
-        grid-gap: 5%;
+        grid-gap: 10%;
     }
 
     input[type='text'],
