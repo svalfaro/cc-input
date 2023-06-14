@@ -207,7 +207,7 @@
     }
 
     input[type='number'].cvc {
-        width: 80%;
+        width: 65%;
     }
 
     input.card-name,
