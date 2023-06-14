@@ -203,7 +203,7 @@
     /* the actual box inputs */
     input[type='number'].exp-mm,
     input[type='number'].exp-yy {
-        width: 30%;
+        width: 20%;
     }
 
     input[type='number'].cvc {
