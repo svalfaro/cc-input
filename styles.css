@@ -6,7 +6,7 @@
         font-family: 'Space Grotesk', sans-serif;
         font-size: 18px;
         min-height: 100vh;
-        max-width: 390px;
+        /* max-width: 390px; */
     }
 
     @layer base {
@@ -165,14 +165,14 @@
         height: 80px;
         width: 100%;
     }
-
+    /* 
     section.card-exp-section {
         width: 50%;
     }
 
     section.cvc-section {
         width: 50%;
-    }
+    } */
 
     /* exp date cvs */
     div.middle-box {
@@ -207,7 +207,7 @@
     }
 
     input[type='number'].cvc {
-        width: 70%;
+        width: 80%;
     }
 
     input.card-name,
