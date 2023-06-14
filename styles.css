@@ -167,12 +167,12 @@
     }
 
     section.card-exp-section {
-        width: 45%;
+        width: 46%;
         /* background-color: red; */
     }
 
     section.cvc-section {
-        width: 45%;
+        width: 44%;
         /* background-color: blue; */
     }
 
@@ -205,7 +205,7 @@
     /* the actual box inputs */
     input[type='number'].exp-mm,
     input[type='number'].exp-yy {
-        width: 30%;
+        width: 23%;
     }
 
     input[type='number'].cvc {
