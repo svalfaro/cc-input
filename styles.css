@@ -181,7 +181,7 @@
         flex-wrap: nowrap;
         padding: 0 25px;
         margin-top: 10px;
-        grid-gap: 5%;
+        /* grid-gap: 5%; */
     }
 
     input[type='text'],
@@ -207,7 +207,7 @@
     }
 
     input[type='number'].cvc {
-        width: 65%;
+        width: 80%;
     }
 
     input.card-name,
