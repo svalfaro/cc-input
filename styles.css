@@ -6,7 +6,7 @@
         font-family: 'Space Grotesk', sans-serif;
         font-size: 18px;
         min-height: 100vh;
-        /* max-width: 375px; */
+        max-width: 390px;
     }
 
     @layer base {
@@ -33,6 +33,7 @@
 
     img.main-logo {
         position: relative;
+        width: 390px;
     }
 
     img.bg-card-back,
@@ -180,7 +181,7 @@
         flex-wrap: nowrap;
         padding: 0 25px;
         margin-top: 10px;
-        /* background-color: green; */
+        grid-gap: 5%;
     }
 
     input[type='text'],
@@ -206,7 +207,7 @@
     }
 
     input[type='number'].cvc {
-        width: 86%;
+        width: 83%;
     }
 
     input.card-name,
