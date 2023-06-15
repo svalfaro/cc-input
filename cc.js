@@ -9,8 +9,8 @@ const username = document.querySelector('.card-name');
 const cardNumber = document.querySelector('.card-number');
 const cvcNumber = document.querySelector('.cvc');
 const confirmed = document.querySelector('.confirm-btn');
-const lol = document.querySelector('.main-container');
-const lol2 = document.querySelector('.thank-you-container');
+const mainContainer = document.querySelector('.main-container');
+const tyContainer = document.querySelector('.thank-you-container');
 const hiddenErrorCardNumber = document.querySelector('.card-number-holder');
 
 function enableWarning() {
@@ -173,6 +173,7 @@ cvcNumber.addEventListener('input', (e) => {
 });
 
 function validateUsername(username) {
+    let flag = false;
     if (username.value === '') {
         onlyLettersDisabled();
         cantBeBlankEnabled('blank-warning-username');
@@ -185,10 +186,13 @@ function validateUsername(username) {
         cantBeBlankDisabled('blank-warning-username');
         onlyLettersDisabled();
         removeInputError(username);
+        return true;
     }
+    return flag;
 }
 
 function validateCardNumbers(cardNumber) {
+    let flag = false;
     if (cardNumber.value === '') {
         cantBeBlankEnabled('blank-warning-cardnumber');
         onlyNumbersDisabled();
@@ -209,10 +213,13 @@ function validateCardNumbers(cardNumber) {
         onlyNumbersDisabled();
         limitCharsDisabled('character-warning');
         removeInputError(cardNumber);
+        return true;
     }
+    return flag;
 }
 
 function validateMonthsYears(mm, yy) {
+    let flag = false;
     if (mm.value === '' || yy.value === '') {
         cantBeBlankEnabled('blank-warning-my');
         limitCharsDisabled('character-warning-my');
@@ -236,10 +243,13 @@ function validateMonthsYears(mm, yy) {
         limitCharsDisabled('character-warning-my');
         removeInputError(mm);
         removeInputError(yy);
+        return true;
     }
+    return flag;
 }
 
 function validateCVC(cvc) {
+    let flag = false;
     if (cvc.value === '') {
         cantBeBlankEnabled('blank-warning-cvc');
         limitCharsDisabled('character-warning-cvc');
@@ -249,7 +259,6 @@ function validateCVC(cvc) {
         limitCharsDisabled('character-warning-cvc');
         inputError(cvc);
     } else if (cvc.value.length !== 3) {
-        console.log("it isn't 2");
         cantBeBlankDisabled('blank-warning-cvc');
         limitCharsEnabled('character-warning-cvc');
         inputError(cvc);
@@ -257,12 +266,19 @@ function validateCVC(cvc) {
         cantBeBlankDisabled('blank-warning-cvc');
         limitCharsDisabled('character-warning-cvc');
         removeInputError(cvc);
+        return true;
     }
+    return flag;
 }
 
 confirmed.addEventListener('click', () => {
-    validateUsername(username);
-    validateCardNumbers(cardNumber);
-    validateMonthsYears(expirationMonths, expirationYears);
-    validateCVC(cvcNumber);
+    if (
+        validateUsername(username) &&
+        validateCardNumbers(cardNumber) &&
+        validateMonthsYears(expirationMonths, expirationYears) &&
+        validateCVC(cvcNumber)
+    ) {
+        mainContainer.remove();
+        tyContainer.classList.remove('hide-me');
+    }
 });
